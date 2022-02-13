@@ -1,29 +1,32 @@
-.todoContainer{
+.todoContainer {
     background-color: #ADAEE1;
     height: auto;
 }
-.todoDiv{
+
+.todoDiv {
     border-radius: 10px;
 }
-.todoLogo{
+
+.todoLogo {
     width: 100px;
 }
-.todoTitle{
+
+.todoTitle {
     font-size: 30px;
     font-weight: 700;
 }
-.inputField, .show-field{
+
+.inputField, .show-field {
     font-size: 20px;
     font-weight: 700;
 }
-.addBtn{
+
+.addBtn {
     height: 50px;
     color: #ADAEE1;
     /* background-color: aqua; */
 }
-.inner-fw-edit{
-    /* margin-left: 350px; */
-}
-.inner-fw-delete{
+
+.inner-fw-delete {
     color: #ff0000;
 }
