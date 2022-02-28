@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ToDoList.css';
 import todoLogo from '../../Assets/Images/todoLogo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboardList, faDeleteLeft, faPenToSquare, faPlus, faSquarePlus, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare, faSquarePlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 // Get Data from Local Storage
@@ -12,7 +12,7 @@ const getLocalTasks = () => {
 
     if (tasks) {
         return JSON.parse(tasks);
-    }else{
+    } else {
         return [];
     }
 
@@ -32,11 +32,16 @@ const ToDoList = () => {
         const duplicate = tasks.includes(inputData);
         console.log(duplicate);
 
-        if (!inputData || duplicate) {
+        if (duplicate) {
             alert("This Task Already Exists!");
             setInputData('');
 
-        } else {
+        }
+        else if (!inputData) {
+            alert("Please input a task!");
+            setInputData('');
+        }
+        else {
             setTasks([...tasks, inputData]);
             setInputData('');
         }
